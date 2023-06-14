@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "root#index"
   namespace :api do
-    resources :greeting, only: [:index]
-  end
+    get 'greeting', to: 'greeting#index'
+  end  
 end
