@@ -33,7 +33,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Budget App <a name="about-project"></a>
+# 📖 My Rails APP <a name="about-project"></a>
 
 > This is a simple app that fetches random greetings from an integrated rails backend and displays it in the DOM using react.
 
