@@ -29,10 +29,10 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: my_new_rails_app
+  username: postgres
 
   # The password associated with the postgres role (username).
-  #password:
+  password: 12345
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -58,6 +58,10 @@ development:
 test:
   <<: *default
   database: my_new_rails_app_test
+  port: 5432
+  host: localhost
+  username: postgres
+  password: 12345
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,5 +86,5 @@ test:
 production:
   <<: *default
   database: my_new_rails_app_production
-  username: my_new_rails_app
+  username: postgres
   password: <%= ENV["MY_NEW_RAILS_APP_DATABASE_PASSWORD"] %>
